@@ -331,7 +331,7 @@ namespace VDS.RDF.Parsing
                 value = t.Value;
                 if (value.Equals("true") || value.Equals("false"))
                 {
-                    return context.Handler.CreateLiteralNode(value, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeBoolean));
+                    return context.Handler.CreateLiteralNode(value, XmlSpecsHelper.XmlSchemaDataTypeBooleanUri);
                 }
                 else
                 {

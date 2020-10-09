@@ -154,7 +154,7 @@ namespace VDS.RDF.Writing
             else
             {
                 // A Boolean Result Set
-                g.Assert(new Triple(rset, boolean, g.CreateLiteralNode(results.Result.ToString(), UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeBoolean))));
+                g.Assert(new Triple(rset, boolean, g.CreateLiteralNode(results.Result.ToString(), XmlSpecsHelper.XmlSchemaDataTypeBooleanUri)));
             }
 
             return g;

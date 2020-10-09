@@ -878,7 +878,7 @@ namespace VDS.RDF
             Graph g = new Graph();
             ILiteralNode canonical = (1).ToLiteral(g);
             ILiteralNode alternate =
-                g.CreateLiteralNode("01", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+                g.CreateLiteralNode("01", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri);
 
             List<INode> ns = new List<INode>()
             {

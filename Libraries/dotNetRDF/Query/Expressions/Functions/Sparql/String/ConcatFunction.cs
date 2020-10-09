@@ -97,7 +97,7 @@ namespace VDS.RDF.Query.Expressions.Functions.Sparql.String
             // Produce the appropriate literal form depending on our inputs
             if (allString)
             {
-                return new StringNode(null, output.ToString(), UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString));
+                return new StringNode(null, output.ToString(), XmlSpecsHelper.XmlSchemaDataTypeStringUri);
             }
             else if (allSameTag)
             {

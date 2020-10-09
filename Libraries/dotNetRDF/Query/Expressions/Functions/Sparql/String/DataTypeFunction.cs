@@ -69,7 +69,7 @@ namespace VDS.RDF.Query.Expressions.Functions.Sparql.String
                             }
                             else
                             {
-                                return new UriNode(null, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString));
+                                return new UriNode(null, XmlSpecsHelper.XmlSchemaDataTypeStringUri);
                             }
                         }
                         else

@@ -54,7 +54,7 @@ namespace VDS.RDF.Query.Expressions.Functions.XPath.String
             Regex normalizeSpace = new Regex("\\s{2,}");
             temp = normalizeSpace.Replace(temp, " ");
 
-            return new StringNode(null, temp, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString));
+            return new StringNode(null, temp, XmlSpecsHelper.XmlSchemaDataTypeStringUri);
         }
 
         /// <summary>

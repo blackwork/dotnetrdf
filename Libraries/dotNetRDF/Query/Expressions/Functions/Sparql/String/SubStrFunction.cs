@@ -76,7 +76,7 @@ namespace VDS.RDF.Query.Expressions.Functions.Sparql.String
             {
                 IValuedNode length = CheckArgument(_length, context, bindingID, XPathFunctionFactory.AcceptNumericArguments);
 
-                if (input.Value.Equals(string.Empty)) return new StringNode(null, string.Empty, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString));
+                if (input.Value.Equals(string.Empty)) return new StringNode(null, string.Empty, XmlSpecsHelper.XmlSchemaDataTypeStringUri);
 
                 try
                 {
@@ -143,7 +143,7 @@ namespace VDS.RDF.Query.Expressions.Functions.Sparql.String
             }
             else
             {
-                if (input.Value.Equals(string.Empty)) return new StringNode(null, string.Empty, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString));
+                if (input.Value.Equals(string.Empty)) return new StringNode(null, string.Empty, XmlSpecsHelper.XmlSchemaDataTypeStringUri);
 
                 try
                 {
@@ -191,7 +191,7 @@ namespace VDS.RDF.Query.Expressions.Functions.Sparql.String
                             throw new RdfQueryException("Unable to evaluate a substring as one of the argument expressions returned a typed literal with an invalid type");
                         }
                     }
-                    else if (argumentTypeValidator(UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString)))
+                    else if (argumentTypeValidator(XmlSpecsHelper.XmlSchemaDataTypeStringUri))
                     {
                         // Untyped Literals are treated as Strings and may be returned when the argument allows strings
                         return temp;

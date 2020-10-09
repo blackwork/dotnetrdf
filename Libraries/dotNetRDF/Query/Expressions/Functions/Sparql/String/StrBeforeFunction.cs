@@ -128,7 +128,7 @@ namespace VDS.RDF.Query.Expressions.Functions.Sparql.String
                             throw new RdfQueryException("Unable to evaluate as one of the argument expressions returned a typed literal with an invalid type");
                         }
                     }
-                    else if (argumentTypeValidator(UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString)))
+                    else if (argumentTypeValidator(XmlSpecsHelper.XmlSchemaDataTypeStringUri))
                     {
                         // Untyped Literals are treated as Strings and may be returned when the argument allows strings
                         return lit;

@@ -112,7 +112,7 @@ namespace VDS.RDF.Query.Aggregates.XPath
                 }
             }
 
-            return new StringNode(null, output.ToString(), UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString));
+            return new StringNode(null, output.ToString(), XmlSpecsHelper.XmlSchemaDataTypeStringUri);
         }
 
         /// <summary>

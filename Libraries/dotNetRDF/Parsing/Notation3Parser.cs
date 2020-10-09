@@ -1332,19 +1332,19 @@ namespace VDS.RDF.Parsing
                     {
                         if (TurtleSpecsHelper.IsValidDouble(lit.Value))
                         {
-                            return context.Handler.CreateLiteralNode(lit.Value, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeDouble));
+                            return context.Handler.CreateLiteralNode(lit.Value, XmlSpecsHelper.XmlSchemaDataTypeDoubleUri);
                         }
                         else if (TurtleSpecsHelper.IsValidInteger(lit.Value))
                         {
-                            return context.Handler.CreateLiteralNode(lit.Value, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+                            return context.Handler.CreateLiteralNode(lit.Value, XmlSpecsHelper.XmlSchemaDataTypeIntegerUri);
                         }
                         else if (TurtleSpecsHelper.IsValidDecimal(lit.Value))
                         {
-                            return context.Handler.CreateLiteralNode(lit.Value, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeDecimal));
+                            return context.Handler.CreateLiteralNode(lit.Value, XmlSpecsHelper.XmlSchemaDataTypeDecimalUri);
                         }
                         else
                         {
-                            return context.Handler.CreateLiteralNode(lit.Value, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeBoolean));
+                            return context.Handler.CreateLiteralNode(lit.Value, XmlSpecsHelper.XmlSchemaDataTypeBooleanUri);
                         }
                     }
                     else

@@ -112,7 +112,7 @@ namespace VDS.RDF.Ontology
             if (!_resourceProperties.ContainsKey(OntologyHelper.PropertyInverseOf))
                 _resourceProperties.Add(OntologyHelper.PropertyInverseOf, new HashSet<INode>());
             foreach (Triple t in _graph.GetTriplesWithPredicateObject(
-                graph.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyInverseOf)), _resource))
+                graph.CreateUriNode(OntologyHelper.PropertyInverseOfUri), _resource))
             {
                 _resourceProperties[OntologyHelper.PropertyInverseOf].Add(t.Subject);
             }

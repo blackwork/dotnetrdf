@@ -46,7 +46,7 @@ namespace VDS.RDF
         {
             Graph g = new Graph();
             ILiteralNode canonical = (1).ToLiteral(g);
-            ILiteralNode alternate = g.CreateLiteralNode("01", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+            ILiteralNode alternate = g.CreateLiteralNode("01", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri);
 
             //Use a dud hash function to put everything into a single bucket
             MultiDictionary<INode, int> dictionary = new MultiDictionary<INode, int>(n => 1, false);
@@ -67,7 +67,7 @@ namespace VDS.RDF
         {
             Graph g = new Graph();
             ILiteralNode canonical = (1).ToLiteral(g);
-            ILiteralNode alternate = g.CreateLiteralNode("01", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+            ILiteralNode alternate = g.CreateLiteralNode("01", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri);
 
             MultiDictionary<INode, int> dictionary = new MultiDictionary<INode, int>();
             dictionary.Add(canonical, 1);
@@ -82,7 +82,7 @@ namespace VDS.RDF
         {
             Graph g = new Graph();
             ILiteralNode canonical = (1).ToLiteral(g);
-            ILiteralNode alternate = g.CreateLiteralNode("01", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+            ILiteralNode alternate = g.CreateLiteralNode("01", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri);
 
             //Use a dud hash function to put everything into a single bucket and use
             //the FastNodeComparer
@@ -105,7 +105,7 @@ namespace VDS.RDF
         {
             Graph g = new Graph();
             ILiteralNode canonical = (1).ToLiteral(g);
-            ILiteralNode alternate = g.CreateLiteralNode("01", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+            ILiteralNode alternate = g.CreateLiteralNode("01", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri);
 
             AVLTree<INode, int> tree = new AVLTree<INode, int>();
             
@@ -130,7 +130,7 @@ namespace VDS.RDF
         {
             Graph g = new Graph();
             ILiteralNode canonical = (1).ToLiteral(g);
-            ILiteralNode alternate = g.CreateLiteralNode("01", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+            ILiteralNode alternate = g.CreateLiteralNode("01", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri);
 
             AVLTree<INode, int> tree = new AVLTree<INode, int>(new FastNodeComparer());
 
@@ -154,7 +154,7 @@ namespace VDS.RDF
         {
             Graph g = new Graph();
             ILiteralNode canonical = (1).ToLiteral(g);
-            ILiteralNode alternate = g.CreateLiteralNode("01", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+            ILiteralNode alternate = g.CreateLiteralNode("01", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri);
             Triple a = new Triple(g.CreateVariableNode("s"), g.CreateVariableNode("p"), canonical);
             Triple b = new Triple(g.CreateVariableNode("s"), g.CreateVariableNode("p"), alternate);
 
@@ -181,7 +181,7 @@ namespace VDS.RDF
         {
             Graph g = new Graph();
             ILiteralNode canonical = (1).ToLiteral(g);
-            ILiteralNode alternate = g.CreateLiteralNode("01", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+            ILiteralNode alternate = g.CreateLiteralNode("01", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri);
             Triple a = new Triple(g.CreateVariableNode("s"), g.CreateVariableNode("p"), canonical);
             Triple b = new Triple(g.CreateVariableNode("s"), g.CreateVariableNode("p"), alternate);
 

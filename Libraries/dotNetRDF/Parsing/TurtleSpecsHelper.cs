@@ -646,22 +646,22 @@ namespace VDS.RDF.Parsing
             if (value.Equals("true", comparison) || value.Equals("false", comparison))
             {
                 // Is a Boolean
-                return UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeBoolean);
+                return XmlSpecsHelper.XmlSchemaDataTypeBooleanUri;
             }
             else if (_validInteger.IsMatch(value)) 
             {
                 // Is an Integer
-                return UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger);
+                return XmlSpecsHelper.XmlSchemaDataTypeIntegerUri;
             }
             else if (_validDecimal.IsMatch(value))
             {
                 // Is a Decimal
-                return UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeDecimal);
+                return XmlSpecsHelper.XmlSchemaDataTypeDecimalUri;
             }
             else if (_validDouble.IsMatch(value))
             {
                 // Is a Double
-                return UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeDouble);
+                return XmlSpecsHelper.XmlSchemaDataTypeDoubleUri;
             }
             else
             {

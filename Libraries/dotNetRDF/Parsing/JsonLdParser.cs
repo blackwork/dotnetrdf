@@ -272,8 +272,7 @@ namespace VDS.RDF.Parsing
                     }
                     // Otherwise direction mode is CompoundLiteral
                     var literalNode = handler.CreateBlankNode();
-                    var xsdString =
-                        UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString);
+                    var xsdString = XmlSpecsHelper.XmlSchemaDataTypeStringUri;
                     handler.HandleTriple(new Triple(
                         literalNode,
                         handler.CreateUriNode(RdfSpecsHelper.RdfValueUri),
