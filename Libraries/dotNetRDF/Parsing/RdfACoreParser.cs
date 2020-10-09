@@ -156,7 +156,7 @@ namespace VDS.RDF.Parsing
                 IRdfAEvent current;
                 bool first = true;
                 int nesting = 0;
-                INode rdfType = context.Handler.CreateUriNode(new Uri(RdfSpecsHelper.RdfType));
+                INode rdfType = context.Handler.CreateUriNode(RdfSpecsHelper.RdfTypeUri);
                 List<IncompleteTriple> localIncompletes = new List<IncompleteTriple>();
 
                 do

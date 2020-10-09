@@ -364,7 +364,7 @@ namespace VDS.RDF.Writing
             // First off determine what the XML Element should be
             // If there is a rdf:type triple then create a typed node
             // Otherwise create a rdf:Description node
-            INode rdfType = context.Graph.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfType));
+            INode rdfType = context.Graph.CreateUriNode(RdfSpecsHelper.RdfTypeUri);
             Triple typeTriple = ts.FirstOrDefault(t => t.Predicate.Equals(rdfType) && t.Object.NodeType == NodeType.Uri);
             INode subj;
             if (typeTriple != null)
@@ -681,7 +681,7 @@ namespace VDS.RDF.Writing
                 }
 
                 // First see if there is a typed triple available (only applicable if we have more than one triple)
-                INode rdfType = context.Graph.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfType));
+                INode rdfType = context.Graph.CreateUriNode(RdfSpecsHelper.RdfTypeUri);
                 Triple typeTriple = c.Triples.FirstOrDefault(t => t.Predicate.Equals(rdfType) && t.Object.NodeType == NodeType.Uri);
                 if (typeTriple != null)
                 {

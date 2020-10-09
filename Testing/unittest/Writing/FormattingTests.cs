@@ -46,20 +46,20 @@ namespace VDS.RDF.Writing
             g.NamespaceMap.AddNamespace("ex", new Uri("http://example.org/"));
 
             //Create URIs used for datatypes
-            Uri dtInt = new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger);
-            Uri dtFloat = new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat);
-            Uri dtDouble = new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble);
-            Uri dtDecimal = new Uri(XmlSpecsHelper.XmlSchemaDataTypeDecimal);
-            Uri dtBoolean = new Uri(XmlSpecsHelper.XmlSchemaDataTypeBoolean);
+            Uri dtInt = XmlSpecsHelper.XmlSchemaDataTypeIntegerUri;
+            Uri dtFloat = XmlSpecsHelper.XmlSchemaDataTypeFloatUri;
+            Uri dtDouble = XmlSpecsHelper.XmlSchemaDataTypeDoubleUri;
+            Uri dtDecimal = XmlSpecsHelper.XmlSchemaDataTypeDecimalUri;
+            Uri dtBoolean = XmlSpecsHelper.XmlSchemaDataTypeBooleanUri;
             Uri dtUnknown = new Uri("http://example.org/unknownType");
-            Uri dtXmlLiteral = new Uri(RdfSpecsHelper.RdfXmlLiteral);
+            Uri dtXmlLiteral = RdfSpecsHelper.RdfXmlLiteralUri;
 
             //Create Nodes used for our test Triples
             IBlankNode subjBnode = g.CreateBlankNode();
             IUriNode subjUri = g.CreateUriNode(new Uri("http://example.org/subject"));
             IUriNode subjUri2 = g.CreateUriNode(new Uri("http://example.org/123"));
             IUriNode predUri = g.CreateUriNode(new Uri("http://example.org/vocab#predicate"));
-            IUriNode predType = g.CreateUriNode(new Uri(RdfSpecsHelper.RdfType));
+            IUriNode predType = g.CreateUriNode(RdfSpecsHelper.RdfTypeUri);
             IBlankNode objBnode = g.CreateBlankNode();
             IUriNode objUri = g.CreateUriNode(new Uri("http://example.org/object"));
             ILiteralNode objString = g.CreateLiteralNode("This is a literal");

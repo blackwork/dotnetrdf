@@ -24,6 +24,7 @@
 // </copyright>
 */
 
+using System;
 using System.Text.RegularExpressions;
 
 namespace VDS.RDF.Parsing
@@ -38,46 +39,90 @@ namespace VDS.RDF.Parsing
         /// </summary>
         public const string RdfList = "http://www.w3.org/1999/02/22-rdf-syntax-ns#List";
         /// <summary>
+        /// URI for rdf:List.
+        /// </summary>
+        public static readonly Uri RdfListUri = UriFactory.Create(RdfList);
+        /// <summary>
         /// URI for rdf:first.
         /// </summary>
         public const string RdfListFirst = "http://www.w3.org/1999/02/22-rdf-syntax-ns#first";
+        /// <summary>
+        /// URI for rdf:first.
+        /// </summary>
+        public static readonly Uri RdfListFirstUri = UriFactory.Create(RdfListFirst);
         /// <summary>
         /// URI for rdf:rest.
         /// </summary>
         public const string RdfListRest = "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest";
         /// <summary>
+        /// URI for rdf:rest.
+        /// </summary>
+        public static readonly Uri RdfListRestUri = UriFactory.Create(RdfListRest);
+        /// <summary>
         /// URI for rdf:nil.
         /// </summary>
         public const string RdfListNil = "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil";
+        /// <summary>
+        /// URI for rdf:nil.
+        /// </summary>
+        public static readonly Uri RdfListNilUri = UriFactory.Create(RdfListNil);
         /// <summary>
         /// URI for rdf:type.
         /// </summary>
         public const string RdfType = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
         /// <summary>
+        /// URI for rdf:type.
+        /// </summary>
+        public static readonly Uri RdfTypeUri = UriFactory.Create(RdfType);
+        /// <summary>
         /// URI for rdf:XMLLiteral.
         /// </summary>
         public const string RdfXmlLiteral = "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral";
+        /// <summary>
+        /// URI for rdf:XMLLiteral.
+        /// </summary>
+        public static readonly Uri RdfXmlLiteralUri = UriFactory.Create(RdfXmlLiteral);
         /// <summary>
         /// URI for rdf:subject.
         /// </summary>
         public const string RdfSubject = "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject";
         /// <summary>
+        /// URI for rdf:subject.
+        /// </summary>
+        public static readonly Uri RdfSubjectUri = UriFactory.Create(RdfSubject);
+        /// <summary>
         /// URI for rdf:predicate.
         /// </summary>
         public const string RdfPredicate = "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate";
+        /// <summary>
+        /// URI for rdf:predicate.
+        /// </summary>
+        public static readonly Uri RdfPredicateUri = UriFactory.Create(RdfPredicate);
         /// <summary>
         /// URI for rdf:object.
         /// </summary>
         public const string RdfObject = "http://www.w3.org/1999/02/22-rdf-syntax-ns#object";
         /// <summary>
+        /// URI for rdf:object.
+        /// </summary>
+        public static readonly Uri RdfObjectUri = UriFactory.Create(RdfObject);
+        /// <summary>
         /// URI for rdf:Statement.
         /// </summary>
         public const string RdfStatement = "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement";
+        /// <summary>
+        /// URI for rdf:Statement.
+        /// </summary>
+        public static readonly Uri RdfStatementUri = UriFactory.Create(RdfStatement);
 
         /// <summary>
         /// URI for rdf:langString the implicit type of language specified literals.
         /// </summary>
         public const string RdfLangString = "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString";
+        /// <summary>
+        /// URI for rdf:langString the implicit type of language specified literals.
+        /// </summary>
+        public static readonly Uri RdfLangStringUri = UriFactory.Create(RdfLangString);
 
         /// <summary>
         /// Pattern for Valid Language Specifiers.
@@ -103,20 +148,36 @@ namespace VDS.RDF.Parsing
         /// URI for rdf:value.
         /// </summary>
         public const string RdfValue = "http://www.w3.org/1999/02/22-rdf-syntax-ns#value";
+        /// <summary>
+        /// URI for rdf:value.
+        /// </summary>
+        public static readonly Uri RdfValueUri = UriFactory.Create(RdfValue);
 
         /// <summary>
         /// URI for rdf:language.
         /// </summary>
         public const string RdfLanguage = "http://www.w3.org/1999/02/22-rdf-syntax-ns#language";
+        /// <summary>
+        /// URI for rdf:language.
+        /// </summary>
+        public static readonly Uri RdfLanguageUri = UriFactory.Create(RdfLanguage);
 
         /// <summary>
         /// URI for rdf:direction.
         /// </summary>
         public const string RdfDirection = "http://www.w3.org/1999/02/22-rdf-syntax-ns#direction";
+        /// <summary>
+        /// URI for rdf:direction.
+        /// </summary>
+        public static readonly Uri RdfDirectionUri = UriFactory.Create(RdfDirection);
 
         /// <summary>
         /// URI for JSON literal datatype.
         /// </summary>
         public const string RdfJson = "http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON";
+        /// <summary>
+        /// URI for JSON literal datatype.
+        /// </summary>
+        public static readonly Uri RdfJsonUri = UriFactory.Create(RdfJson);
     }
 }

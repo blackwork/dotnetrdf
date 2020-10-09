@@ -297,14 +297,14 @@ namespace VDS.RDF.Query.Builder
         public void CanCreateTriplePatternsUsingTypedLiteralObject()
         {
             // when
-            _builder.Subject("s").Predicate("p").ObjectLiteral(42, new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+            _builder.Subject("s").Predicate("p").ObjectLiteral(42, XmlSpecsHelper.XmlSchemaDataTypeIntegerUri);
 
             // then
             Assert.Single(_builder.Patterns);
             IMatchTriplePattern pattern = (IMatchTriplePattern)_builder.Patterns.Single();
             Assert.True(pattern.Object is NodeMatchPattern);
             Assert.Equal("42", ((dynamic)pattern.Object).Node.Value);
-            Assert.Equal(new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger), ((dynamic)pattern.Object).Node.DataType);
+            Assert.Equal(XmlSpecsHelper.XmlSchemaDataTypeIntegerUri, ((dynamic)pattern.Object).Node.DataType);
         }
 
         [Fact]

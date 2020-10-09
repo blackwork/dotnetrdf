@@ -25,6 +25,7 @@
 */
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace VDS.RDF.Parsing
@@ -49,6 +50,8 @@ namespace VDS.RDF.Parsing
         /// Namespace for XML.
         /// </summary>
         public const String NamespaceXml = "http://www.w3.org/XML/1998/namespace";
+        public static readonly Uri NamespaceXmlUri = new Uri(NamespaceXml);
+
         /// <summary>
         /// Namespace for XML Namespaces.
         /// </summary>
@@ -130,10 +133,41 @@ namespace VDS.RDF.Parsing
                             XmlSchemaDataTypeUnsignedLong = NamespaceXmlSchema + "unsignedLong",
                             XmlSchemaDataTypeUnsignedShort = NamespaceXmlSchema + "unsignedShort";
 
+
+        /// <summary>
+        /// Data Type Uri Constants for XML Schema Data Types.
+        /// </summary>
+        public static readonly Uri XmlSchemaDataTypeAnyUriUri = UriFactory.Create(XmlSchemaDataTypeAnyUri),
+                                   XmlSchemaDataTypeBase64BinaryUri = UriFactory.Create(XmlSchemaDataTypeBase64Binary),
+                                   XmlSchemaDataTypeBooleanUri = UriFactory.Create(XmlSchemaDataTypeBoolean),
+                                   XmlSchemaDataTypeByteUri = UriFactory.Create(XmlSchemaDataTypeByte),
+                                   XmlSchemaDataTypeDateUri = UriFactory.Create(XmlSchemaDataTypeDate),
+                                   XmlSchemaDataTypeDateTimeUri = UriFactory.Create(XmlSchemaDataTypeDateTime),
+                                   XmlSchemaDataTypeDayTimeDurationUri = UriFactory.Create(XmlSchemaDataTypeDayTimeDuration),
+                                   XmlSchemaDataTypeDurationUri = UriFactory.Create(XmlSchemaDataTypeDuration),
+                                   XmlSchemaDataTypeDecimalUri = UriFactory.Create(XmlSchemaDataTypeDecimal),
+                                   XmlSchemaDataTypeDoubleUri = UriFactory.Create(XmlSchemaDataTypeDouble),
+                                   XmlSchemaDataTypeFloatUri = UriFactory.Create(XmlSchemaDataTypeFloat),
+                                   XmlSchemaDataTypeHexBinaryUri = UriFactory.Create(XmlSchemaDataTypeHexBinary),
+                                   XmlSchemaDataTypeIntUri = UriFactory.Create(XmlSchemaDataTypeInt),
+                                   XmlSchemaDataTypeIntegerUri = UriFactory.Create(XmlSchemaDataTypeInteger),
+                                   XmlSchemaDataTypeLongUri = UriFactory.Create(XmlSchemaDataTypeLong),
+                                   XmlSchemaDataTypeNegativeIntegerUri = UriFactory.Create(XmlSchemaDataTypeNegativeInteger),
+                                   XmlSchemaDataTypeNonNegativeIntegerUri = UriFactory.Create(XmlSchemaDataTypeNonNegativeInteger),
+                                   XmlSchemaDataTypeNonPositiveIntegerUri = UriFactory.Create(XmlSchemaDataTypeNonPositiveInteger),
+                                   XmlSchemaDataTypePositiveIntegerUri = UriFactory.Create(XmlSchemaDataTypePositiveInteger),
+                                   XmlSchemaDataTypeShortUri = UriFactory.Create(XmlSchemaDataTypeShort),
+                                   XmlSchemaDataTypeTimeUri = UriFactory.Create(XmlSchemaDataTypeTime),
+                                   XmlSchemaDataTypeStringUri = UriFactory.Create(XmlSchemaDataTypeString),
+                                   XmlSchemaDataTypeUnsignedByteUri = UriFactory.Create(XmlSchemaDataTypeUnsignedByte),
+                                   XmlSchemaDataTypeUnsignedIntUri = UriFactory.Create(XmlSchemaDataTypeUnsignedInt),
+                                   XmlSchemaDataTypeUnsignedLongUri = UriFactory.Create(XmlSchemaDataTypeUnsignedLong),
+                                   XmlSchemaDataTypeUnsignedShortUri = UriFactory.Create(XmlSchemaDataTypeUnsignedShort);
+
         /// <summary>
         /// Array of Constants for Data Types that are supported by the Literal Node CompareTo method.
         /// </summary>
-        public static String[] SupportedTypes = new String[] {
+        public static HashSet<string> SupportedTypes = new HashSet<string> {
             XmlSchemaDataTypeAnyUri,
             XmlSchemaDataTypeBase64Binary,
             XmlSchemaDataTypeBoolean,

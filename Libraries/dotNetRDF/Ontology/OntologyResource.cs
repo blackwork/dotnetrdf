@@ -464,7 +464,7 @@ namespace VDS.RDF.Ontology
         /// <returns></returns>
         public bool ClearDifferentFrom()
         {
-            INode diffFrom = _graph.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyDifferentFrom));
+            INode diffFrom = _graph.CreateUriNode(OntologyHelper.PropertyDifferentFromUri);
             _graph.Retract(_graph.GetTriplesWithSubjectPredicate(_resource, diffFrom).ToList());
             _graph.Retract(_graph.GetTriplesWithPredicateObject(diffFrom, _resource).ToList());
             return ClearResourceProperty(OntologyHelper.PropertyDifferentFrom, true);
@@ -676,7 +676,7 @@ namespace VDS.RDF.Ontology
         /// <returns></returns>
         public bool ClearSameAs()
         {
-            INode sameAs = _graph.CreateUriNode(UriFactory.Create(OntologyHelper.PropertySameAs));
+            INode sameAs = _graph.CreateUriNode(OntologyHelper.PropertySameAsUri);
             _graph.Retract(_graph.GetTriplesWithSubjectPredicate(_resource, sameAs).ToList());
             _graph.Retract(_graph.GetTriplesWithPredicateObject(sameAs, _resource).ToList());
             return ClearResourceProperty(OntologyHelper.PropertySameAs, true);

@@ -47,7 +47,7 @@ namespace VDS.RDF.Nodes
         /// <param name="value">Long value.</param>
         /// <param name="lexicalValue">Lexical Value.</param>
         public LongNode(IGraph g, long value, string lexicalValue)
-            : this(g, value, lexicalValue, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeInteger)) { }
+            : this(g, value, lexicalValue, XmlSpecsHelper.XmlSchemaDataTypeIntegerUri) { }
 
         /// <summary>
         /// Creates a new long valued node.
@@ -143,7 +143,7 @@ namespace VDS.RDF.Nodes
         /// <param name="value">Unsigned Long value.</param>
         /// <param name="lexicalValue">Lexical Value.</param>
         public UnsignedLongNode(IGraph g, ulong value, string lexicalValue)
-            : this(g, value, lexicalValue, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeUnsignedInt)) { }
+            : this(g, value, lexicalValue, XmlSpecsHelper.XmlSchemaDataTypeUnsignedIntUri) { }
 
         /// <summary>
         /// Creates a new unsigned long valued node.

@@ -35,7 +35,6 @@ namespace VDS.RDF.Parsing.Handlers
     public class StripStringHandler : BaseRdfHandler, IWrappingRdfHandler
     {
         private IRdfHandler _handler;
-        private static readonly Uri DataTypeString = new Uri(XmlSpecsHelper.XmlSchemaDataTypeString);
 
         /// <summary>
         /// Creates a new StripStringHandler.
@@ -51,7 +50,7 @@ namespace VDS.RDF.Parsing.Handlers
         /// </summary>
         protected override bool HandleTripleInternal(Triple t)
         {
-            if (t.Object is ILiteralNode literal && EqualityHelper.AreUrisEqual(literal.DataType, DataTypeString))
+            if (t.Object is ILiteralNode literal && EqualityHelper.AreUrisEqual(literal.DataType, XmlSpecsHelper.XmlSchemaDataTypeStringUri))
                 t = new Triple(t.Subject, t.Predicate, t.Graph.CreateLiteralNode(literal.Value));
 
             return _handler.HandleTriple(t);

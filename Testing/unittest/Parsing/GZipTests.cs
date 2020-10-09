@@ -571,7 +571,7 @@ namespace VDS.RDF.Parsing
 
         private void NormalizeDatatypes(IGraph g)
         {
-            var xsdString = new Uri(XmlSpecsHelper.XmlSchemaDataTypeString);
+            var xsdString = XmlSpecsHelper.XmlSchemaDataTypeStringUri;
             foreach (var t in g.Triples.Where(t => t.Object is ILiteralNode).ToList())
             {
                 var lit = (ILiteralNode) t.Object;

@@ -49,12 +49,12 @@ namespace VDS.RDF.Query
 
             g.Assert(subj, pred, (12).ToLiteral(g));
             g.Assert(subj, pred, g.CreateLiteralNode("12"));
-            g.Assert(subj, pred, g.CreateLiteralNode("12", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonNegativeInteger)));
-            g.Assert(subj, pred, g.CreateLiteralNode("12", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonPositiveInteger)));
-            g.Assert(subj, pred, g.CreateLiteralNode("1200", new Uri(XmlSpecsHelper.XmlSchemaDataTypeByte)));
+            g.Assert(subj, pred, g.CreateLiteralNode("12", XmlSpecsHelper.XmlSchemaDataTypeNonNegativeIntegerUri));
+            g.Assert(subj, pred, g.CreateLiteralNode("12", XmlSpecsHelper.XmlSchemaDataTypeNonPositiveIntegerUri));
+            g.Assert(subj, pred, g.CreateLiteralNode("1200", XmlSpecsHelper.XmlSchemaDataTypeByteUri));
             g.Assert(subj, pred, ((byte)50).ToLiteral(g));
-            g.Assert(subj, pred, g.CreateLiteralNode("-50", new Uri(XmlSpecsHelper.XmlSchemaDataTypeByte)));
-            g.Assert(subj, pred, g.CreateLiteralNode("-50", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedByte)));
+            g.Assert(subj, pred, g.CreateLiteralNode("-50", XmlSpecsHelper.XmlSchemaDataTypeByteUri));
+            g.Assert(subj, pred, g.CreateLiteralNode("-50", XmlSpecsHelper.XmlSchemaDataTypeUnsignedByteUri));
             g.Assert(subj, pred, g.CreateUriNode(new Uri("http://example.org")));
 
             TripleStore store = new TripleStore();

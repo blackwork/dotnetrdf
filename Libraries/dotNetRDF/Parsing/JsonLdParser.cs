@@ -276,21 +276,21 @@ namespace VDS.RDF.Parsing
                         UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeString);
                     handler.HandleTriple(new Triple(
                         literalNode,
-                        handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfValue)),
+                        handler.CreateUriNode(RdfSpecsHelper.RdfValueUri),
                         handler.CreateLiteralNode(literalValue, xsdString),
                         graphIri));
                     if (!string.IsNullOrEmpty(language))
                     {
                         handler.HandleTriple(new Triple(
                             literalNode,
-                            handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfLanguage)),
+                            handler.CreateUriNode(RdfSpecsHelper.RdfLanguageUri),
                             handler.CreateLiteralNode(language, xsdString),
                             graphIri));
                     }
 
                     handler.HandleTriple(new Triple(
                         literalNode,
-                        handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfDirection)),
+                        handler.CreateUriNode(RdfSpecsHelper.RdfDirectionUri),
                         handler.CreateLiteralNode(direction, xsdString),
                         graphIri));
 

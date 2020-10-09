@@ -171,7 +171,7 @@ namespace VDS.RDF.Query.Aggregates.Sparql
                     case SparqlNumericType.Integer:
                     ////Integer Values
                     // lngavg = lngtotal / (long)count;
-                    // return new LiteralNode(null, lngavg.ToString(), new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger));
+                    // return new LiteralNode(null, lngavg.ToString(), XmlSpecsHelper.XmlSchemaDataTypeIntegerUri);
 
                     case SparqlNumericType.Decimal:
                         // Decimal Values

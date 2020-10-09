@@ -138,10 +138,10 @@ namespace VDS.RDF.Writing
         {
             IBlankNode oneOfNode = graph.CreateBlankNode();
             IBlankNode chainA = graph.CreateBlankNode();
-            IUriNode rdfType = graph.CreateUriNode(new Uri(RdfSpecsHelper.RdfType));
-            IUriNode rdfFirst = graph.CreateUriNode(new Uri(RdfSpecsHelper.RdfListFirst));
-            IUriNode rdfRest = graph.CreateUriNode(new Uri(RdfSpecsHelper.RdfListRest));
-            IUriNode rdfNil = graph.CreateUriNode(new Uri(RdfSpecsHelper.RdfListNil));
+            IUriNode rdfType = graph.CreateUriNode(RdfSpecsHelper.RdfTypeUri);
+            IUriNode rdfFirst = graph.CreateUriNode(RdfSpecsHelper.RdfListFirstUri);
+            IUriNode rdfRest = graph.CreateUriNode(RdfSpecsHelper.RdfListRestUri);
+            IUriNode rdfNil = graph.CreateUriNode(RdfSpecsHelper.RdfListNilUri);
             IUriNode owlClass = graph.CreateUriNode(new Uri(NamespaceMapper.OWL + "Class"));
             IUriNode owlOneOf = graph.CreateUriNode(new Uri(NamespaceMapper.OWL + "oneOf"));
             IUriNode owlThing = graph.CreateUriNode(new Uri(NamespaceMapper.OWL + "Thing"));

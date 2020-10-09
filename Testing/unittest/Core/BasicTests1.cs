@@ -59,7 +59,7 @@ namespace VDS.RDF
                 g.CreateBlankNode("test"),
                 g.CreateLiteralNode("Test text"),
                 g.CreateLiteralNode("Test text", "en"),
-                g.CreateLiteralNode("Test text", new Uri(XmlSpecsHelper.XmlSchemaDataTypeString)),
+                g.CreateLiteralNode("Test text", XmlSpecsHelper.XmlSchemaDataTypeStringUri),
                 g.CreateUriNode("rdf:type"),
                 null,
                 g.CreateUriNode(new Uri("http://example.org#test")),
@@ -501,8 +501,8 @@ namespace VDS.RDF
                 Assert.NotEqual(plain3, plain4);
 
                 //Typed Literals
-                Uri intType = new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger);
-                Uri boolType = new Uri(XmlSpecsHelper.XmlSchemaDataTypeBoolean);
+                Uri intType = XmlSpecsHelper.XmlSchemaDataTypeIntegerUri;
+                Uri boolType = XmlSpecsHelper.XmlSchemaDataTypeBooleanUri;
 
                 ILiteralNode one1, one2, one3, one4;
                 one1 = g.CreateLiteralNode("1");
@@ -577,41 +577,41 @@ namespace VDS.RDF
             nodes.Add(g.CreateBlankNode());
             nodes.Add(g.CreateLiteralNode("cheese"));
             nodes.Add(g.CreateLiteralNode("aardvark"));
-            nodes.Add(g.CreateLiteralNode(DateTime.Now.AddDays(-25).ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), new Uri(XmlSpecsHelper.XmlSchemaDataTypeDateTime)));
+            nodes.Add(g.CreateLiteralNode(DateTime.Now.AddDays(-25).ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), XmlSpecsHelper.XmlSchemaDataTypeDateTimeUri));
             nodes.Add(g.CreateLiteralNode("duck"));
             nodes.Add(g.CreateUriNode(":otherUri"));
-            nodes.Add(g.CreateLiteralNode("1.5", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)));
+            nodes.Add(g.CreateLiteralNode("1.5", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri));
             nodes.Add(g.CreateUriNode(new Uri("http://www.google.com")));
-            nodes.Add(g.CreateLiteralNode(DateTime.Now.AddYears(3).ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), new Uri(XmlSpecsHelper.XmlSchemaDataTypeDateTime)));
-            nodes.Add(g.CreateLiteralNode("23", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)));
-            nodes.Add(g.CreateLiteralNode("M43d", new Uri(XmlSpecsHelper.XmlSchemaDataTypeBase64Binary)));
+            nodes.Add(g.CreateLiteralNode(DateTime.Now.AddYears(3).ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), XmlSpecsHelper.XmlSchemaDataTypeDateTimeUri));
+            nodes.Add(g.CreateLiteralNode("23", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri));
+            nodes.Add(g.CreateLiteralNode("M43d", XmlSpecsHelper.XmlSchemaDataTypeBase64BinaryUri));
             nodes.Add(g.CreateUriNode(new Uri("http://www.dotnetrdf.org")));
-            nodes.Add(g.CreateLiteralNode("12", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)));
+            nodes.Add(g.CreateLiteralNode("12", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri));
             nodes.Add(g.CreateBlankNode("monkey"));
             nodes.Add(g.CreateBlankNode());
             nodes.Add(g.CreateLiteralNode("chaese"));
-            nodes.Add(g.CreateLiteralNode("1.0456345", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)));
+            nodes.Add(g.CreateLiteralNode("1.0456345", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri));
             nodes.Add(g.CreateLiteralNode("cheese"));
-            nodes.Add(g.CreateLiteralNode(Convert.ToBase64String(new byte[] { Byte.Parse("32") }), new Uri(XmlSpecsHelper.XmlSchemaDataTypeBase64Binary)));
-            nodes.Add(g.CreateLiteralNode("TA==", new Uri(XmlSpecsHelper.XmlSchemaDataTypeBase64Binary)));
-            nodes.Add(g.CreateLiteralNode("-45454", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)));
-            nodes.Add(g.CreateLiteralNode(DateTime.Now.ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), new Uri(XmlSpecsHelper.XmlSchemaDataTypeDateTime)));
-            nodes.Add(g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)));
-            nodes.Add(g.CreateLiteralNode("242344.3456435", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)));
-            nodes.Add(g.CreateLiteralNode("true", new Uri(XmlSpecsHelper.XmlSchemaDataTypeBoolean)));
+            nodes.Add(g.CreateLiteralNode(Convert.ToBase64String(new byte[] { Byte.Parse("32") }), XmlSpecsHelper.XmlSchemaDataTypeBase64BinaryUri));
+            nodes.Add(g.CreateLiteralNode("TA==", XmlSpecsHelper.XmlSchemaDataTypeBase64BinaryUri));
+            nodes.Add(g.CreateLiteralNode("-45454", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri));
+            nodes.Add(g.CreateLiteralNode(DateTime.Now.ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), XmlSpecsHelper.XmlSchemaDataTypeDateTimeUri));
+            nodes.Add(g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri));
+            nodes.Add(g.CreateLiteralNode("242344.3456435", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri));
+            nodes.Add(g.CreateLiteralNode("true", XmlSpecsHelper.XmlSchemaDataTypeBooleanUri));
             nodes.Add(g.CreateUriNode(":what"));
             nodes.Add(null);
-            nodes.Add(g.CreateLiteralNode("false", new Uri(XmlSpecsHelper.XmlSchemaDataTypeBoolean)));
-            nodes.Add(g.CreateLiteralNode("invalid-value", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)));
+            nodes.Add(g.CreateLiteralNode("false", XmlSpecsHelper.XmlSchemaDataTypeBooleanUri));
+            nodes.Add(g.CreateLiteralNode("invalid-value", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri));
 
             for (int i = 0; i < 32; i++)
             {
-                nodes.Add(g.CreateLiteralNode(i.ToString("x"), new Uri(XmlSpecsHelper.XmlSchemaDataTypeHexBinary)));
+                nodes.Add(g.CreateLiteralNode(i.ToString("x"), XmlSpecsHelper.XmlSchemaDataTypeHexBinaryUri));
             }
 
             for (byte b = 50; b < 77; b++)
             {
-                nodes.Add(g.CreateLiteralNode(Convert.ToBase64String(new byte[] { b }), new Uri(XmlSpecsHelper.XmlSchemaDataTypeBase64Binary)));
+                nodes.Add(g.CreateLiteralNode(Convert.ToBase64String(new byte[] { b }), XmlSpecsHelper.XmlSchemaDataTypeBase64BinaryUri));
             }
 
             nodes.Sort();
@@ -672,32 +672,32 @@ namespace VDS.RDF
             nodes.Add(g.CreateBlankNode());
             nodes.Add(g.CreateLiteralNode("cheese"));
             nodes.Add(g.CreateLiteralNode("aardvark"));
-            nodes.Add(g.CreateLiteralNode(DateTime.Now.AddDays(-25).ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), new Uri(XmlSpecsHelper.XmlSchemaDataTypeDateTime)));
+            nodes.Add(g.CreateLiteralNode(DateTime.Now.AddDays(-25).ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), XmlSpecsHelper.XmlSchemaDataTypeDateTimeUri));
             nodes.Add(g.CreateLiteralNode("duck"));
             nodes.Add(g.CreateUriNode(":otherUri"));
-            nodes.Add(g.CreateLiteralNode("1.5", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)));
+            nodes.Add(g.CreateLiteralNode("1.5", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri));
             nodes.Add(g.CreateUriNode(new Uri("http://www.google.com")));
-            nodes.Add(g.CreateLiteralNode(DateTime.Now.AddYears(3).ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), new Uri(XmlSpecsHelper.XmlSchemaDataTypeDateTime)));
-            nodes.Add(g.CreateLiteralNode("23", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)));
-            nodes.Add(g.CreateLiteralNode("M43d", new Uri(XmlSpecsHelper.XmlSchemaDataTypeBase64Binary)));
+            nodes.Add(g.CreateLiteralNode(DateTime.Now.AddYears(3).ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), XmlSpecsHelper.XmlSchemaDataTypeDateTimeUri));
+            nodes.Add(g.CreateLiteralNode("23", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri));
+            nodes.Add(g.CreateLiteralNode("M43d", XmlSpecsHelper.XmlSchemaDataTypeBase64BinaryUri));
             nodes.Add(g.CreateUriNode(new Uri("http://www.dotnetrdf.org")));
-            nodes.Add(g.CreateLiteralNode("12", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)));
+            nodes.Add(g.CreateLiteralNode("12", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri));
             nodes.Add(g.CreateBlankNode("monkey"));
             nodes.Add(g.CreateBlankNode());
             nodes.Add(g.CreateLiteralNode("chaese"));
-            nodes.Add(g.CreateLiteralNode("1.0456345", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)));
+            nodes.Add(g.CreateLiteralNode("1.0456345", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri));
             nodes.Add(g.CreateLiteralNode("cheese"));
-            nodes.Add(g.CreateLiteralNode(Convert.ToBase64String(new byte[] { Byte.Parse("32") }), new Uri(XmlSpecsHelper.XmlSchemaDataTypeBase64Binary)));
-            nodes.Add(g.CreateLiteralNode("TA==", new Uri(XmlSpecsHelper.XmlSchemaDataTypeBase64Binary)));
-            nodes.Add(g.CreateLiteralNode("-45454", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)));
-            nodes.Add(g.CreateLiteralNode(DateTime.Now.ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), new Uri(XmlSpecsHelper.XmlSchemaDataTypeDateTime)));
-            nodes.Add(g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)));
-            nodes.Add(g.CreateLiteralNode("242344.3456435", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)));
-            nodes.Add(g.CreateLiteralNode("true", new Uri(XmlSpecsHelper.XmlSchemaDataTypeBoolean)));
+            nodes.Add(g.CreateLiteralNode(Convert.ToBase64String(new byte[] { Byte.Parse("32") }), XmlSpecsHelper.XmlSchemaDataTypeBase64BinaryUri));
+            nodes.Add(g.CreateLiteralNode("TA==", XmlSpecsHelper.XmlSchemaDataTypeBase64BinaryUri));
+            nodes.Add(g.CreateLiteralNode("-45454", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri));
+            nodes.Add(g.CreateLiteralNode(DateTime.Now.ToString(XmlSpecsHelper.XmlSchemaDateTimeFormat), XmlSpecsHelper.XmlSchemaDataTypeDateTimeUri));
+            nodes.Add(g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri));
+            nodes.Add(g.CreateLiteralNode("242344.3456435", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri));
+            nodes.Add(g.CreateLiteralNode("true", XmlSpecsHelper.XmlSchemaDataTypeBooleanUri));
             nodes.Add(g.CreateUriNode(":what"));
             nodes.Add(null);
-            nodes.Add(g.CreateLiteralNode("false", new Uri(XmlSpecsHelper.XmlSchemaDataTypeBoolean)));
-            nodes.Add(g.CreateLiteralNode("invalid-value", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)));
+            nodes.Add(g.CreateLiteralNode("false", XmlSpecsHelper.XmlSchemaDataTypeBooleanUri));
+            nodes.Add(g.CreateLiteralNode("invalid-value", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri));
 
             nodes.Sort(comparer);
 

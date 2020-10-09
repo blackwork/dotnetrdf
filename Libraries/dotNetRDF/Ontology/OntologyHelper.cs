@@ -65,6 +65,33 @@ namespace VDS.RDF.Ontology
                             PropertyType = NamespaceMapper.RDF + "type";
 
         /// <summary>
+        /// Constant URIs for properties exposed by <see cref="OntologyResource">OntologyResource</see> and its derived classes.
+        /// </summary>
+        public static readonly Uri PropertyVersionInfoUri = UriFactory.Create(PropertyVersionInfo),
+                                   PropertySameAsUri = UriFactory.Create(PropertySameAs),
+                                   PropertyDifferentFromUri = UriFactory.Create(PropertyDifferentFrom),
+                                   PropertyEquivalentClassUri = UriFactory.Create(PropertyEquivalentClass),
+                                   PropertyDisjointWithUri = UriFactory.Create(PropertyDisjointWith),
+                                   PropertyEquivalentPropertyUri = UriFactory.Create(PropertyEquivalentProperty),
+                                   PropertyInverseOfUri = UriFactory.Create(PropertyInverseOf),
+                                   PropertyBackwardCompatibleWithUri = UriFactory.Create(PropertyBackwardCompatibleWith),
+                                   PropertyIncompatibleWithUri = UriFactory.Create(PropertyIncompatibleWith),
+                                   PropertyPriorVersionUri = UriFactory.Create(PropertyPriorVersion),
+                                   PropertyImportsUri = UriFactory.Create(PropertyImports),
+                                
+                                   PropertyCommentUri = UriFactory.Create(PropertyComment),
+                                   PropertyLabelUri = UriFactory.Create(PropertyLabel),
+                                   PropertySeeAlsoUri = UriFactory.Create(PropertySeeAlso),
+                                   PropertyIsDefinedByUri = UriFactory.Create(PropertyIsDefinedBy),
+                                   PropertySubClassOfUri = UriFactory.Create(PropertySubClassOf),
+                                   PropertySubPropertyOfUri = UriFactory.Create(PropertySubPropertyOf),
+                                   PropertyRangeUri = UriFactory.Create(PropertyRange),
+                                   PropertyDomainUri = UriFactory.Create(PropertyDomain),
+                                
+                                   PropertyTypeUri = UriFactory.Create(PropertyType);
+
+
+        /// <summary>
         /// Constants for URIs for classes in Ontologies.
         /// </summary>
         public const String RdfsClass = NamespaceMapper.RDFS + "Class",
@@ -75,6 +102,18 @@ namespace VDS.RDF.Ontology
                             OwlDatatypeProperty = NamespaceMapper.OWL + "DatatypeProperty",
                             OwlAnnotationProperty = NamespaceMapper.OWL + "AnnotationProperty",
                             OwlOntology = NamespaceMapper.OWL + "Ontology";
+
+        /// <summary>
+        /// Constants for URIs for classes in Ontologies.
+        /// </summary>
+        public static readonly Uri RdfsClassUri = UriFactory.Create(RdfsClass),
+                                   OwlClassUri = UriFactory.Create(OwlClass),
+                                   RdfPropertyUri = UriFactory.Create(RdfProperty),
+                                   RdfsResourceUri = UriFactory.Create(RdfsResource),
+                                   OwlObjectPropertyUri = UriFactory.Create(OwlObjectProperty),
+                                   OwlDatatypePropertyUri = UriFactory.Create(OwlDatatypeProperty),
+                                   OwlAnnotationPropertyUri = UriFactory.Create(OwlAnnotationProperty),
+                                   OwlOntologyUri = UriFactory.Create(OwlOntology);
 
     }
 }

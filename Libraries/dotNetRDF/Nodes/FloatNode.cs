@@ -47,7 +47,7 @@ namespace VDS.RDF.Nodes
         /// <param name="value">Float value.</param>
         /// <param name="lexicalValue">Lexical value.</param>
         public FloatNode(IGraph g, float value, String lexicalValue)
-            : base(g, lexicalValue, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeFloat), SparqlNumericType.Float)
+            : base(g, lexicalValue, XmlSpecsHelper.XmlSchemaDataTypeFloatUri, SparqlNumericType.Float)
         {
             _value = value;
         }

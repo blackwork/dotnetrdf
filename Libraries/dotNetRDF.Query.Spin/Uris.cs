@@ -102,26 +102,26 @@ namespace VDS.RDF.Query.Spin
         public static readonly IUriNode Nil = RDFUtil.CreateUriNode(UriFactory.Create(NamespaceMapper.RDF + "nil"));
         public static readonly IUriNode PropertyFirst = RDFUtil.CreateUriNode(UriFactory.Create(NamespaceMapper.RDF + "first"));
         public static readonly IUriNode PropertyRest = RDFUtil.CreateUriNode(UriFactory.Create(NamespaceMapper.RDF + "rest"));
-        public static readonly IUriNode PropertyType = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyType));
+        public static readonly IUriNode PropertyType = RDFUtil.CreateUriNode(OntologyHelper.PropertyTypeUri);
     }
 
     internal static class RDFS
     {
         public static readonly String NS_URI = NamespaceMapper.RDFS;
 
-        public static readonly IUriNode Class = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.RdfsClass));
-        public static readonly IUriNode PropertyComment = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyComment));
+        public static readonly IUriNode Class = RDFUtil.CreateUriNode(OntologyHelper.RdfsClassUri);
+        public static readonly IUriNode PropertyComment = RDFUtil.CreateUriNode(OntologyHelper.PropertyCommentUri);
         public static readonly IUriNode ClassDatatype = RDFUtil.CreateUriNode(UriFactory.Create(NamespaceMapper.RDFS + "Datatype"));
-        public static readonly IUriNode PropertyDomain = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyDomain));
-        public static readonly IUriNode PropertyIsDefinedBy = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyIsDefinedBy));
-        public static readonly IUriNode PropertyLabel = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyLabel));
+        public static readonly IUriNode PropertyDomain = RDFUtil.CreateUriNode(OntologyHelper.PropertyDomainUri);
+        public static readonly IUriNode PropertyIsDefinedBy = RDFUtil.CreateUriNode(OntologyHelper.PropertyIsDefinedByUri);
+        public static readonly IUriNode PropertyLabel = RDFUtil.CreateUriNode(OntologyHelper.PropertyLabelUri);
         public static readonly IUriNode ClassLiteral = RDFUtil.CreateUriNode(UriFactory.Create(NamespaceMapper.RDFS + "Literal"));
-        public static readonly IUriNode ClassProperty = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.RdfProperty));
-        public static readonly IUriNode PropertyRange = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyRange));
+        public static readonly IUriNode ClassProperty = RDFUtil.CreateUriNode(OntologyHelper.RdfPropertyUri);
+        public static readonly IUriNode PropertyRange = RDFUtil.CreateUriNode(OntologyHelper.PropertyRangeUri);
         public static readonly IUriNode ClassResource = RDFUtil.CreateUriNode(UriFactory.Create(NamespaceMapper.RDFS + "Resource"));
-        public static readonly IUriNode PropertySeeAlso = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertySeeAlso));
-        public static readonly IUriNode PropertySubClassOf = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertySubClassOf));
-        public static readonly IUriNode PropertySubPropertyOf = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertySubPropertyOf));
+        public static readonly IUriNode PropertySeeAlso = RDFUtil.CreateUriNode(OntologyHelper.PropertySeeAlsoUri);
+        public static readonly IUriNode PropertySubClassOf = RDFUtil.CreateUriNode(OntologyHelper.PropertySubClassOfUri);
+        public static readonly IUriNode PropertySubPropertyOf = RDFUtil.CreateUriNode(OntologyHelper.PropertySubPropertyOfUri);
     }
 
     internal static class OWL
@@ -130,29 +130,29 @@ namespace VDS.RDF.Query.Spin
 
 
         public static readonly IUriNode PropertyAllValuesFrom = RDFUtil.CreateUriNode(UriFactory.Create(NS_URI + "allValuesFrom"));
-        public static readonly IUriNode ClassAnnotationProperty = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.OwlAnnotationProperty));
-        public static readonly IUriNode Class = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.OwlClass));
+        public static readonly IUriNode ClassAnnotationProperty = RDFUtil.CreateUriNode(OntologyHelper.OwlAnnotationPropertyUri);
+        public static readonly IUriNode Class = RDFUtil.CreateUriNode(OntologyHelper.OwlClassUri);
         public static readonly IUriNode PropertyCardinality = RDFUtil.CreateUriNode(UriFactory.Create(NS_URI + "cardinality"));
-        public static readonly IUriNode ClassDatatypeProperty = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.OwlDatatypeProperty));
-        public static readonly IUriNode PropertyDifferentFrom = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyDifferentFrom));
-        public static readonly IUriNode PropertyDisjointWith = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyDisjointWith));
-        public static readonly IUriNode PropertyEquivalentClass = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyEquivalentClass));
-        public static readonly IUriNode PropertyEquivalentProperty = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyEquivalentProperty));
+        public static readonly IUriNode ClassDatatypeProperty = RDFUtil.CreateUriNode(OntologyHelper.OwlDatatypePropertyUri);
+        public static readonly IUriNode PropertyDifferentFrom = RDFUtil.CreateUriNode(OntologyHelper.PropertyDifferentFromUri);
+        public static readonly IUriNode PropertyDisjointWith = RDFUtil.CreateUriNode(OntologyHelper.PropertyDisjointWithUri);
+        public static readonly IUriNode PropertyEquivalentClass = RDFUtil.CreateUriNode(OntologyHelper.PropertyEquivalentClassUri);
+        public static readonly IUriNode PropertyEquivalentProperty = RDFUtil.CreateUriNode(OntologyHelper.PropertyEquivalentPropertyUri);
         public static readonly IUriNode ClassFunctionalProperty = RDFUtil.CreateUriNode(UriFactory.Create(NS_URI + "FunctionalProperty"));
-        public static readonly IUriNode PropertyImports = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyImports));
-        public static readonly IUriNode PropertyIncompatibleWith = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyIncompatibleWith));
-        public static readonly IUriNode PropertyInverseOf = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyInverseOf));
+        public static readonly IUriNode PropertyImports = RDFUtil.CreateUriNode(OntologyHelper.PropertyImportsUri);
+        public static readonly IUriNode PropertyIncompatibleWith = RDFUtil.CreateUriNode(OntologyHelper.PropertyIncompatibleWithUri);
+        public static readonly IUriNode PropertyInverseOf = RDFUtil.CreateUriNode(OntologyHelper.PropertyInverseOfUri);
         public static readonly IUriNode PropertyMaxCardinality = RDFUtil.CreateUriNode(UriFactory.Create(NS_URI + "maxCardinality"));
         public static readonly IUriNode PropertyMinCardinality = RDFUtil.CreateUriNode(UriFactory.Create(NS_URI + "minCardinality"));
         public static readonly IUriNode Nothing = RDFUtil.CreateUriNode(UriFactory.Create(NS_URI + "Nothing"));
-        public static readonly IUriNode ClassObjectProperty = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.OwlObjectProperty));
+        public static readonly IUriNode ClassObjectProperty = RDFUtil.CreateUriNode(OntologyHelper.OwlObjectPropertyUri);
         public static readonly IUriNode PropertyOnProperty = RDFUtil.CreateUriNode(UriFactory.Create(NS_URI + "onProperty"));
-        public static readonly IUriNode ClassOntology = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.OwlOntology));
-        public static readonly IUriNode PropertyPriorVersion = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyPriorVersion));
-        public static readonly IUriNode PropertySameAs = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertySameAs));
+        public static readonly IUriNode ClassOntology = RDFUtil.CreateUriNode(OntologyHelper.OwlOntologyUri);
+        public static readonly IUriNode PropertyPriorVersion = RDFUtil.CreateUriNode(OntologyHelper.PropertyPriorVersionUri);
+        public static readonly IUriNode PropertySameAs = RDFUtil.CreateUriNode(OntologyHelper.PropertySameAsUri);
         public static readonly IUriNode SymmetricProperty = RDFUtil.CreateUriNode(UriFactory.Create(NS_URI + "SymmetricProperty"));
         public static readonly IUriNode Thing = RDFUtil.CreateUriNode(UriFactory.Create(NS_URI + "Thing"));
-        public static readonly IUriNode PropertyVersionInfo = RDFUtil.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyVersionInfo));
+        public static readonly IUriNode PropertyVersionInfo = RDFUtil.CreateUriNode(OntologyHelper.PropertyVersionInfoUri);
     }
 
 }

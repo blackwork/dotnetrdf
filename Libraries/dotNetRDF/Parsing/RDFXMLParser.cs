@@ -321,8 +321,8 @@ namespace VDS.RDF.Parsing
                 }
 
                 // Define XML namespace
-                context.Handler.HandleNamespace("xml", UriFactory.Create(XmlSpecsHelper.NamespaceXml));
-                context.Namespaces.AddNamespace("xml", UriFactory.Create(XmlSpecsHelper.NamespaceXml));
+                context.Handler.HandleNamespace("xml", XmlSpecsHelper.NamespaceXmlUri);
+                context.Namespaces.AddNamespace("xml", XmlSpecsHelper.NamespaceXmlUri);
 
                 // Process the Queue
                 ProcessEventQueue(context);
@@ -648,7 +648,7 @@ namespace VDS.RDF.Parsing
             if (!ElementHasName(element, "Description", NamespaceMapper.RDF, context))
             {
                 // Assert a Triple regarding Type
-                pred = context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfType));
+                pred = context.Handler.CreateUriNode(RdfSpecsHelper.RdfTypeUri);
                 obj = Resolve(context, element);//context.Handler.CreateUriNode(element.QName);
                 if (!context.Handler.HandleTriple(new Triple(subj, pred, obj))) ParserHelper.Stop();
             }
@@ -662,7 +662,7 @@ namespace VDS.RDF.Parsing
                     //if (attr.QName.Equals("rdf:type"))
                     {
                         // Generate a Type Triple
-                        pred = context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfType));
+                        pred = context.Handler.CreateUriNode(RdfSpecsHelper.RdfTypeUri);
 
                         // Resolve URIRef into a Uri Node
                         UriReferenceEvent uriref = new UriReferenceEvent(attr.Value, attr.SourceXml);
@@ -1467,11 +1467,11 @@ namespace VDS.RDF.Parsing
 
                 // Set the first element in the list
                 subj = b1;
-                firstPred = context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfListFirst));
+                firstPred = context.Handler.CreateUriNode(RdfSpecsHelper.RdfListFirstUri);
                 if (!context.Handler.HandleTriple(new Triple(subj, firstPred, node.SubjectNode))) ParserHelper.Stop();
 
                 // Middle elements of the list
-                restPred = context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfListRest));
+                restPred = context.Handler.CreateUriNode(RdfSpecsHelper.RdfListRestUri);
                 while (seqNodes.Count >= 1)
                 {
                     node = seqNodes.Dequeue();
@@ -1487,14 +1487,14 @@ namespace VDS.RDF.Parsing
                 }
 
                 // Set last element of the list to have its rest as nil
-                if (!context.Handler.HandleTriple(new Triple(b1, restPred, context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfListNil))))) ParserHelper.Stop();
+                if (!context.Handler.HandleTriple(new Triple(b1, restPred, context.Handler.CreateUriNode(RdfSpecsHelper.RdfListNilUri)))) ParserHelper.Stop();
             }
             else
             {
                 // Empty list
 
                 // Object is therefore rdf:nil
-                obj = context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfListNil));
+                obj = context.Handler.CreateUriNode(RdfSpecsHelper.RdfListNilUri);
 
                 // Assert
                 if (!context.Handler.HandleTriple(new Triple(subj, pred, obj))) ParserHelper.Stop();
@@ -1695,7 +1695,7 @@ namespace VDS.RDF.Parsing
 
                         // Assert a Type Triple
                         UriReferenceEvent type = new UriReferenceEvent(a.Value, a.SourceXml);
-                        pred = context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfType));
+                        pred = context.Handler.CreateUriNode(RdfSpecsHelper.RdfTypeUri);
                         obj = Resolve(context, type, element.BaseUri);
 
                         if (!context.Handler.HandleTriple(new Triple(parentEl.SubjectNode, pred, obj))) ParserHelper.Stop();
@@ -1824,10 +1824,10 @@ namespace VDS.RDF.Parsing
         /// <param name="obj">Object of the Triple.</param>
         private void Reify(RdfXmlParserContext context, IUriNode uriref, INode subj, INode pred, INode obj)
         {
-            if (!context.Handler.HandleTriple(new Triple(uriref, context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfSubject)), subj))) ParserHelper.Stop();
-            if (!context.Handler.HandleTriple(new Triple(uriref, context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfPredicate)), pred))) ParserHelper.Stop();
-            if (!context.Handler.HandleTriple(new Triple(uriref, context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfObject)), obj))) ParserHelper.Stop();
-            if (!context.Handler.HandleTriple(new Triple(uriref, context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfType)), context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfStatement))))) ParserHelper.Stop();
+            if (!context.Handler.HandleTriple(new Triple(uriref, context.Handler.CreateUriNode(RdfSpecsHelper.RdfSubjectUri), subj))) ParserHelper.Stop();
+            if (!context.Handler.HandleTriple(new Triple(uriref, context.Handler.CreateUriNode(RdfSpecsHelper.RdfPredicateUri), pred))) ParserHelper.Stop();
+            if (!context.Handler.HandleTriple(new Triple(uriref, context.Handler.CreateUriNode(RdfSpecsHelper.RdfObjectUri), obj))) ParserHelper.Stop();
+            if (!context.Handler.HandleTriple(new Triple(uriref, context.Handler.CreateUriNode(RdfSpecsHelper.RdfTypeUri), context.Handler.CreateUriNode(UriFactory.Create(RdfSpecsHelper.RdfStatement))))) ParserHelper.Stop();
         }
 
         /// <summary>

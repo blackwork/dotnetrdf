@@ -215,7 +215,7 @@ namespace VDS.RDF
                 plain,
                 g.CreateLiteralNode("plain english", "en"),
                 g.CreateLiteralNode("plain french", "fr"),
-                g.CreateLiteralNode("typed", new Uri(XmlSpecsHelper.XmlSchemaDataTypeString)),
+                g.CreateLiteralNode("typed", XmlSpecsHelper.XmlSchemaDataTypeStringUri),
                 (1234).ToLiteral(g),
                 (12.34m).ToLiteral(g),
                 (12.34d).ToLiteral(g),
@@ -238,11 +238,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
             };
 
             this.ShowOrdering(nodes);
@@ -292,11 +292,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeByte)),
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeByte)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeByte)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeByte)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeByte)),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeByteUri),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeByteUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeByteUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeByteUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeByteUri),
             };
 
             this.ShowOrdering(nodes);
@@ -313,11 +313,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedByte)),
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedByte)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedByte)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedByte)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedByte)),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeUnsignedByteUri),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeUnsignedByteUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeUnsignedByteUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeUnsignedByteUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeUnsignedByteUri),
             };
 
             this.ShowOrdering(nodes);
@@ -334,11 +334,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
             };
 
             this.ShowOrdering(nodes);
@@ -355,11 +355,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeShort)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeShort)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeShort)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeShort)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeShort)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeShortUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeShortUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeShortUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeShortUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeShortUri),
             };
 
             this.ShowOrdering(nodes);
@@ -376,11 +376,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeLong)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeLong)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeLong)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeLong)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeLong)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeLongUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeLongUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeLongUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeLongUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeLongUri),
             };
 
             this.ShowOrdering(nodes);
@@ -397,11 +397,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedInt)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedInt)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedInt)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedInt)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedInt)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeUnsignedIntUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeUnsignedIntUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeUnsignedIntUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeUnsignedIntUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeUnsignedIntUri),
             };
 
             this.ShowOrdering(nodes);
@@ -418,11 +418,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedShort)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedShort)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedShort)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedShort)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedShort)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeUnsignedShortUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeUnsignedShortUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeUnsignedShortUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeUnsignedShortUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeUnsignedShortUri),
             };
 
             this.ShowOrdering(nodes);
@@ -439,11 +439,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedLong)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedLong)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedLong)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedLong)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeUnsignedLong)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeUnsignedLongUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeUnsignedLongUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeUnsignedLongUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeUnsignedLongUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeUnsignedLongUri),
             };
 
             this.ShowOrdering(nodes);
@@ -460,11 +460,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNegativeInteger)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNegativeInteger)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNegativeInteger)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNegativeInteger)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNegativeInteger)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeNegativeIntegerUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeNegativeIntegerUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeNegativeIntegerUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeNegativeIntegerUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeNegativeIntegerUri),
             };
 
             this.ShowOrdering(nodes);
@@ -481,11 +481,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonPositiveInteger)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonPositiveInteger)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonPositiveInteger)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonPositiveInteger)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonPositiveInteger)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeNonPositiveIntegerUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeNonPositiveIntegerUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeNonPositiveIntegerUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeNonPositiveIntegerUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeNonPositiveIntegerUri),
             };
 
             this.ShowOrdering(nodes);
@@ -502,11 +502,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonNegativeInteger)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonNegativeInteger)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonNegativeInteger)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonNegativeInteger)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeNonNegativeInteger)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeNonNegativeIntegerUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeNonNegativeIntegerUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeNonNegativeIntegerUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeNonNegativeIntegerUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeNonNegativeIntegerUri),
             };
 
             this.ShowOrdering(nodes);
@@ -523,11 +523,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypePositiveInteger)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypePositiveInteger)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypePositiveInteger)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypePositiveInteger)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypePositiveInteger)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypePositiveIntegerUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypePositiveIntegerUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypePositiveIntegerUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypePositiveIntegerUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypePositiveIntegerUri),
             };
 
             this.ShowOrdering(nodes);
@@ -544,11 +544,11 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeHexBinary)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeHexBinary)),
-                g.CreateLiteralNode((1).ToString("X2"), new Uri(XmlSpecsHelper.XmlSchemaDataTypeHexBinary)),
-                g.CreateLiteralNode((10).ToString("X2"), new Uri(XmlSpecsHelper.XmlSchemaDataTypeHexBinary)),
-                g.CreateLiteralNode("-03", new Uri(XmlSpecsHelper.XmlSchemaDataTypeHexBinary)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeHexBinaryUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeHexBinaryUri),
+                g.CreateLiteralNode((1).ToString("X2"), XmlSpecsHelper.XmlSchemaDataTypeHexBinaryUri),
+                g.CreateLiteralNode((10).ToString("X2"), XmlSpecsHelper.XmlSchemaDataTypeHexBinaryUri),
+                g.CreateLiteralNode("-03", XmlSpecsHelper.XmlSchemaDataTypeHexBinaryUri),
             };
 
             this.ShowOrdering(nodes);
@@ -565,18 +565,18 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
-                g.CreateLiteralNode("1.2e4", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
-                g.CreateLiteralNode("1.2e3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
-                g.CreateLiteralNode("1.2", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
-                g.CreateLiteralNode("1.2e1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
-                g.CreateLiteralNode("1.2E4", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
-                g.CreateLiteralNode("1.2e0", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
-                g.CreateLiteralNode("1.2e-1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
-                g.CreateLiteralNode("10e14", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDouble)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
+                g.CreateLiteralNode("1.2e4", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
+                g.CreateLiteralNode("1.2e3", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
+                g.CreateLiteralNode("1.2", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
+                g.CreateLiteralNode("1.2e1", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
+                g.CreateLiteralNode("1.2E4", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
+                g.CreateLiteralNode("1.2e0", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
+                g.CreateLiteralNode("1.2e-1", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
+                g.CreateLiteralNode("10e14", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri),
             };
 
             this.ShowOrdering(nodes);
@@ -593,18 +593,18 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("1.2e4", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("1.2e3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("1.2", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("1.2e1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("1.2E4", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("1.2e0", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("1.2e-1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("10e14", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("1.2e4", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("1.2e3", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("1.2", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("1.2e1", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("1.2E4", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("1.2e0", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("1.2e-1", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("10e14", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
             };
 
             this.ShowOrdering(nodes);
@@ -621,17 +621,17 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("http://example.org", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("http://example.org:8080", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("http://example.org/path", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("ftp://ftp.example.org", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("mailto:someone@example.org", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("ex:custom", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("http://example.org", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("http://example.org:8080", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("http://example.org/path", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("ftp://ftp.example.org", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("mailto:someone@example.org", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("ex:custom", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
             };
 
             this.ShowOrdering(nodes);
@@ -648,16 +648,16 @@ namespace VDS.RDF
 
             List<INode> nodes = new List<INode>()
             {
-                g.CreateLiteralNode("something", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDateTime)),
+                g.CreateLiteralNode("something", XmlSpecsHelper.XmlSchemaDataTypeDateTimeUri),
                 DateTime.Now.ToLiteral(g),
                 DateTime.Now.AddYears(3).AddDays(1).ToLiteral(g),
                 DateTime.Now.AddYears(-25).AddMinutes(-17).ToLiteral(g),
                 new DateTime(1, 2, 3, 4, 5, 6).ToLiteral(g),
                 new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour,
                     DateTime.Now.Minute, DateTime.Now.Second, DateTimeKind.Utc).ToLiteral(g),
-                g.CreateLiteralNode("thing", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDateTime)),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDateTime)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeDateTime)),
+                g.CreateLiteralNode("thing", XmlSpecsHelper.XmlSchemaDataTypeDateTimeUri),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeDateTimeUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeDateTimeUri),
             };
 
             this.ShowOrdering(nodes);
@@ -716,7 +716,7 @@ namespace VDS.RDF
                 plain,
                 g.CreateLiteralNode("plain english", "en"),
                 g.CreateLiteralNode("plain french", "fr"),
-                g.CreateLiteralNode("typed", new Uri(XmlSpecsHelper.XmlSchemaDataTypeString)),
+                g.CreateLiteralNode("typed", XmlSpecsHelper.XmlSchemaDataTypeStringUri),
                 (1234).ToLiteral(g),
                 (12.34m).ToLiteral(g),
                 (12.34d).ToLiteral(g),
@@ -752,45 +752,45 @@ namespace VDS.RDF
                 b,
                 g.CreateBlankNode(),
                 g.CreateBlankNode("id"),
-                g.CreateLiteralNode("1.2e3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("1.2", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("1.2e1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeShort)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeShort)),
-                g.CreateLiteralNode("1.2E4", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("http://example.org:8080", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("http://example.org/path", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("ftp://ftp.example.org", new Uri(XmlSpecsHelper.XmlSchemaDataTypeAnyUri)),
-                g.CreateLiteralNode("1.2e0", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
+                g.CreateLiteralNode("1.2e3", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("1.2", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("1.2e1", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeShortUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeShortUri),
+                g.CreateLiteralNode("1.2E4", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("http://example.org:8080", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("http://example.org/path", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("ftp://ftp.example.org", XmlSpecsHelper.XmlSchemaDataTypeAnyUriUri),
+                g.CreateLiteralNode("1.2e0", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
                 DateTime.Now.ToLiteral(g),
                 DateTime.Now.AddYears(3).AddDays(1).ToLiteral(g),
                 DateTime.Now.AddYears(-25).AddMinutes(-17).ToLiteral(g),
-                g.CreateLiteralNode("1.2e-1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
-                g.CreateLiteralNode("10e14", new Uri(XmlSpecsHelper.XmlSchemaDataTypeFloat)),
+                g.CreateLiteralNode("1.2e-1", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
+                g.CreateLiteralNode("10e14", XmlSpecsHelper.XmlSchemaDataTypeFloatUri),
                 h.CreateBlankNode(),
                 h.CreateBlankNode("id"),
                 b,
                 plain,
                 g.CreateLiteralNode("plain english", "en"),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeInteger)),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeIntegerUri),
                 g.CreateLiteralNode("plain french", "fr"),
-                g.CreateLiteralNode("typed", new Uri(XmlSpecsHelper.XmlSchemaDataTypeString)),
+                g.CreateLiteralNode("typed", XmlSpecsHelper.XmlSchemaDataTypeStringUri),
                 (1234).ToLiteral(g),
                 (12.34m).ToLiteral(g),
                 (12.34d).ToLiteral(g),
                 (false).ToLiteral(g),
-                g.CreateLiteralNode((1).ToString("X2"), new Uri(XmlSpecsHelper.XmlSchemaDataTypeHexBinary)),
-                g.CreateLiteralNode((10).ToString("X2"), new Uri(XmlSpecsHelper.XmlSchemaDataTypeHexBinary)),
+                g.CreateLiteralNode((1).ToString("X2"), XmlSpecsHelper.XmlSchemaDataTypeHexBinaryUri),
+                g.CreateLiteralNode((10).ToString("X2"), XmlSpecsHelper.XmlSchemaDataTypeHexBinaryUri),
                 (true).ToLiteral(g),
                 plain,
                 u,
                 g.CreateUriNode(new Uri("http://example.org")),
                 g.CreateUriNode(new Uri("http://example.org:8080")),
-                g.CreateLiteralNode("1", new Uri(XmlSpecsHelper.XmlSchemaDataTypeByte)),
-                g.CreateLiteralNode("10", new Uri(XmlSpecsHelper.XmlSchemaDataTypeByte)),
-                g.CreateLiteralNode("-3", new Uri(XmlSpecsHelper.XmlSchemaDataTypeByte)),
+                g.CreateLiteralNode("1", XmlSpecsHelper.XmlSchemaDataTypeByteUri),
+                g.CreateLiteralNode("10", XmlSpecsHelper.XmlSchemaDataTypeByteUri),
+                g.CreateLiteralNode("-3", XmlSpecsHelper.XmlSchemaDataTypeByteUri),
                 g.CreateUriNode(new Uri("http://www.dotnetrdf.org")),
                 g.CreateUriNode(new Uri("http://www.dotnetrdf.org/configuration#")),
                 g.CreateUriNode(new Uri("http://www.dotnetrdf.org/Configuration#")),
@@ -901,7 +901,7 @@ namespace VDS.RDF
             Graph g = new Graph();
             ILiteralNode canonical = (true).ToLiteral(g);
             ILiteralNode alternate =
-                g.CreateLiteralNode("TRUE", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeBoolean));
+                g.CreateLiteralNode("TRUE", XmlSpecsHelper.XmlSchemaDataTypeBooleanUri);
 
             List<INode> ns = new List<INode>()
             {
@@ -924,7 +924,7 @@ namespace VDS.RDF
             Graph g = new Graph();
             ILiteralNode canonical = (1d).ToLiteral(g);
             ILiteralNode alternate =
-                g.CreateLiteralNode("1.00000", UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeDouble));
+                g.CreateLiteralNode("1.00000", XmlSpecsHelper.XmlSchemaDataTypeDoubleUri);
 
             List<INode> ns = new List<INode>()
             {

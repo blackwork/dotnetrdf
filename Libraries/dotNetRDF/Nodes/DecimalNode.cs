@@ -47,7 +47,7 @@ namespace VDS.RDF.Nodes
         /// <param name="value">Decimal value.</param>
         /// <param name="lexicalValue">Lexical value.</param>
         public DecimalNode(IGraph g, decimal value, string lexicalValue)
-            : base(g, lexicalValue, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeDecimal), SparqlNumericType.Decimal)
+            : base(g, lexicalValue, XmlSpecsHelper.XmlSchemaDataTypeDecimalUri, SparqlNumericType.Decimal)
         {
             _value = value;
         }

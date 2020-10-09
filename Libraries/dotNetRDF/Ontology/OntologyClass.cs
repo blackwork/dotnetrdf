@@ -54,15 +54,15 @@ namespace VDS.RDF.Ontology
             : base(resource, graph)
         {
             // Q: Assert that this resource is a Class?
-            // UriNode rdfType = graph.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyType));
-            // graph.Assert(new Triple(resource, rdfType, graph.CreateUriNode(new Uri(OntologyHelper.RdfsClass))));
+            // UriNode rdfType = graph.CreateUriNode(OntologyHelper.PropertyTypeUri);
+            // graph.Assert(new Triple(resource, rdfType, graph.CreateUriNode(OntologyHelper.RdfsClassUri)));
 
             IntialiseProperty(OntologyHelper.PropertySubClassOf, false);
             IntialiseProperty(OntologyHelper.PropertyEquivalentClass, false);
             IntialiseProperty(OntologyHelper.PropertyDisjointWith, false);
 
             // Find derived classes
-            IUriNode subClassOf = _graph.CreateUriNode(UriFactory.Create(OntologyHelper.PropertySubClassOf));
+            IUriNode subClassOf = _graph.CreateUriNode(OntologyHelper.PropertySubClassOfUri);
             _resourceProperties.Add(PropertyDerivedClass, new HashSet<INode>());
             _resourceProperties.Add(PropertyDirectSubClass, new HashSet<INode>());
             foreach (Triple t in _graph.GetTriplesWithPredicateObject(subClassOf, _resource))
@@ -158,7 +158,7 @@ namespace VDS.RDF.Ontology
         /// <returns></returns>
         public bool ClearSubClasses()
         {
-            _graph.Retract(_graph.GetTriplesWithPredicateObject(_graph.CreateUriNode(UriFactory.Create(OntologyHelper.PropertySubClassOf)), _resource).ToList());
+            _graph.Retract(_graph.GetTriplesWithPredicateObject(_graph.CreateUriNode(OntologyHelper.PropertySubClassOfUri), _resource).ToList());
             return ClearResourceProperty(PropertyDerivedClass, false);
         }
 
@@ -258,7 +258,7 @@ namespace VDS.RDF.Ontology
         /// <returns></returns>
         public bool ClearSuperClasses()
         {
-            _graph.Retract(_graph.GetTriplesWithSubjectPredicate(_resource, _graph.CreateUriNode(UriFactory.Create(OntologyHelper.PropertySubClassOf))).ToList());
+            _graph.Retract(_graph.GetTriplesWithSubjectPredicate(_resource, _graph.CreateUriNode(OntologyHelper.PropertySubClassOfUri)).ToList());
             return ClearResourceProperty(OntologyHelper.PropertySubClassOf, true);
         }
 
@@ -358,7 +358,7 @@ namespace VDS.RDF.Ontology
         /// <returns></returns>
         public bool ClearEquivalentClasses()
         {
-            INode equivClass = _graph.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyEquivalentClass));
+            INode equivClass = _graph.CreateUriNode(OntologyHelper.PropertyEquivalentClassUri);
             _graph.Retract(_graph.GetTriplesWithSubjectPredicate(_resource, equivClass).ToList());
             _graph.Retract(_graph.GetTriplesWithPredicateObject(equivClass, _resource).ToList());
             return ClearResourceProperty(OntologyHelper.PropertyEquivalentClass, true);
@@ -457,7 +457,7 @@ namespace VDS.RDF.Ontology
         /// <returns></returns>
         public bool ClearDisjointClasses()
         {
-            INode disjointClass = _graph.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyDisjointWith));
+            INode disjointClass = _graph.CreateUriNode(OntologyHelper.PropertyDisjointWithUri);
             _graph.Retract(_graph.GetTriplesWithSubjectPredicate(_resource, disjointClass).ToList());
             _graph.Retract(_graph.GetTriplesWithPredicateObject(disjointClass, _resource).ToList());
             return ClearResourceProperty(OntologyHelper.PropertyDisjointWith, true);
@@ -621,7 +621,7 @@ namespace VDS.RDF.Ontology
         {
             get
             {
-                return (from t in _graph.GetTriplesWithPredicateObject(_graph.CreateUriNode(UriFactory.Create(OntologyHelper.PropertyType)), _resource)
+                return (from t in _graph.GetTriplesWithPredicateObject(_graph.CreateUriNode(OntologyHelper.PropertyTypeUri), _resource)
                         select new OntologyResource(t.Subject, _graph));
             }
         }

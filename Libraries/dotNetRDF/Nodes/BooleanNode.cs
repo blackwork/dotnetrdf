@@ -46,7 +46,7 @@ namespace VDS.RDF.Nodes
         /// <param name="value">Boolean Value.</param>
         /// <param name="lexicalValue">Lexical Value.</param>
         public BooleanNode(IGraph g, bool value, String lexicalValue)
-            : base(g, lexicalValue, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeBoolean))
+            : base(g, lexicalValue, XmlSpecsHelper.XmlSchemaDataTypeBooleanUri)
         {
             _value = value;
         }

@@ -46,7 +46,7 @@ namespace VDS.RDF.Nodes
         /// <param name="value">Byte value.</param>
         /// <param name="lexicalValue">Lexical value.</param>
         public ByteNode(IGraph g, byte value, String lexicalValue)
-            : base(g, lexicalValue, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeUnsignedByte), SparqlNumericType.Integer)
+            : base(g, lexicalValue, XmlSpecsHelper.XmlSchemaDataTypeUnsignedByteUri, SparqlNumericType.Integer)
         {
             _value = value;
         }
@@ -140,7 +140,7 @@ namespace VDS.RDF.Nodes
         /// <param name="value">Signed Byte value.</param>
         /// <param name="lexicalValue">Lexical value.</param>
         public SignedByteNode(IGraph g, sbyte value, String lexicalValue)
-            : base(g, lexicalValue, UriFactory.Create(XmlSpecsHelper.XmlSchemaDataTypeByte), SparqlNumericType.Integer)
+            : base(g, lexicalValue, XmlSpecsHelper.XmlSchemaDataTypeByteUri, SparqlNumericType.Integer)
         {
             _value = value;
         }
